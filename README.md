@@ -7,6 +7,8 @@ Prerequisites
 =============
 
 Rest-Client: https://code.google.com/p/rest-client/
+Downloadpage: http://code.fosshub.com/WizToolsorg-RESTClient/downloads
+Download the Jar of Version 3.4 GUI Edition
 
 Setup
 =====
