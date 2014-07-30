@@ -14,6 +14,7 @@ Setup
 =====
 
 - Clone or Download the Repository, run it in Visual Studio 2013.
+- Your Browser should open an you get a 404 Error page as i didnt define any index page.
 - Start Rest-Client and load the TestRequest from ```/DemoData/``` Directory. (Check if the url from the running application corresponds with the one in the template)
 - When you send the Request you should get a Status Code 200 OK.
 - If you change the Username in the JSON message in the Request Body you should get a Status Code 401 Unauthorized.
