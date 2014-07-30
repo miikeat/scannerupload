@@ -7,9 +7,11 @@ using System.Web.Http;
 using ScannerDemo.Models;
 using System.Collections;
 using System.Diagnostics;
+using ScannerDemo.Authentication;
 
 namespace ScannerDemo.Controllers
 {
+    
     public class ScannerController : ApiController
     {
 
@@ -22,20 +24,13 @@ namespace ScannerDemo.Controllers
         }
 
         // POST: api/Scanner
+        [BasicAuthenticator(realm: "ScannerUpload")]
         public HttpResponseMessage Post([FromBody]Upload data)
         {
-            if (data != null)
+            if (data != null && data.Cart != null && data.Cart.Count() > 0)
             {
                 Upl = data;
-                if (data.User.Username.Equals("TestUser") && data.User.Password.Equals("TestPassword"))
-                {
-                    if (data.Cart.Count() <= 0)
-                       return new HttpResponseMessage(HttpStatusCode.BadRequest);
-                    else
-                       return new HttpResponseMessage(HttpStatusCode.OK);
-                }
-                else
-                    return new HttpResponseMessage(HttpStatusCode.Unauthorized);
+                return new HttpResponseMessage(HttpStatusCode.OK);
             }
             else
             {
