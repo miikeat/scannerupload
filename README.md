@@ -20,7 +20,7 @@ Setup & Use
 - If you change the Username in the Auth tab you should get a Status Code 401 Unauthorized.
 - If you remove or rename the Cart from the JSON message under the Body tab you should get a Status Code 400 Bad Request.
 
-If you open the page http://localhost:6251/api/scanner in your browser, you should see the last message sent to the Service.
+If you open the page http://localhost:6251/api/scanner in your browser, you should see the last message sent with the user credentials attached at the end.
  
 
 
