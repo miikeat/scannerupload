@@ -43,6 +43,12 @@ namespace ScannerDemo.Authentication
                 string userId = parts[0].Trim();
                 string password = parts[1].Trim();
 
+                // Quick 'n Dirty: Set User&Password in Scanner Controller
+                Models.User usr = new Models.User();
+                usr.Username = userId;
+                usr.Password = password;
+                Controllers.ScannerController.usr = usr;
+                
                 if (userId.Equals(password)) // Just a dumb check
                 {
                     var claims = new List<Claim>()

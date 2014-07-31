@@ -13,7 +13,7 @@ namespace ScannerDemo.Models
         public Upload()
         {
             Cart = new List<Article>();
-            User = new User();
+            User = new User(); 
         }
 
 

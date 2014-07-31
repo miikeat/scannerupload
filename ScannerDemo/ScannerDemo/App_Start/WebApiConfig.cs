@@ -11,9 +11,6 @@ namespace ScannerDemo
         public static void Register(HttpConfiguration config)
         {
 
-            // enable JSON
-            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
-            
             // Web API configuration and services
 
             // Web API routes

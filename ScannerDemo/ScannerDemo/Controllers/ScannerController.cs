@@ -16,6 +16,7 @@ namespace ScannerDemo.Controllers
     {
 
         public static Upload Upl = null;
+        public static User usr;
         
         // GET: api/Scanner
         public Upload Get()
@@ -30,6 +31,7 @@ namespace ScannerDemo.Controllers
             if (data != null && data.Cart != null && data.Cart.Count() > 0)
             {
                 Upl = data;
+                Upl.User = usr;
                 return new HttpResponseMessage(HttpStatusCode.OK);
             }
             else
